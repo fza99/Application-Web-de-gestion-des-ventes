@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Show</servlet-name>
+        <servlet-class>org.iwim.controller.Show</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>org.iwim.controller.Admin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Liv</servlet-name>
+        <servlet-class>org.iwim.controller.Liv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Produit</servlet-name>
+        <servlet-class>org.iwim.controller.Produit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjouterProduit</servlet-name>
+        <servlet-class>org.iwim.controller.AjouterProduit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Show</servlet-name>
+        <url-pattern>/Show</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/Admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Liv</servlet-name>
+        <url-pattern>/Liv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Produit</servlet-name>
+        <url-pattern>/Produit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjouterProduit</servlet-name>
+        <url-pattern>/AjouterProduit</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>faces/index.xhtml</welcome-file>
+    </welcome-file-list>
+</web-app>
